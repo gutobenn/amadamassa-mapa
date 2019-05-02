@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Área de Entrega - Amada Massa</title>
+</head>
+<body>
+	<form method="POST" id="formpedido">
+		<label for="endereco_coleta">Endereço:</label>
+		<input type="text" name="endereco_coleta" id="endereco_coleta" required />
+
+    <select id="opcoes_entrega">
+    </select>
+		<div id="map" style="height: 400px"></div>
+  </form>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb6l3pC5to8pGMkTIy72uzj3S4FQ3D67s&libraries=places&language=pt&region=BR"></script>
+  <script src="js/geoxml3.js"></script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>
