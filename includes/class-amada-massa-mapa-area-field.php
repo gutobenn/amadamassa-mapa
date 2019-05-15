@@ -8,7 +8,7 @@ class AmadaMassaMapa_AreaField extends NF_Abstracts_Input{
     protected $_section = 'misc';
     protected $_type = 'textbox';
     protected $_templates = 'amada_massa_area';
-    protected $_wrap_template = 'wrap-no-label';
+    //protected $_wrap_template = 'wrap';
     protected $_settings_only = array(
         'label', 'key', 'required'
     );
