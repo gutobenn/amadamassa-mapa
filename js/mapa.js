@@ -4,13 +4,13 @@ jQuery( document ).ready( function( $ ) {
   var address_in_area = false;
   var coleta_area = 0;
 
-  var opcoesSelect = [
+  /*var opcoesSelect = [
     ["Entrega direta - terça-feira", "Entrega direta - quarta-feira", "Entrega direta - quinta-feira", "Coleta na Amada Massa"],
     ["Entrega direta - quarta-feira", "Coleta na Amada Massa"],
     ["Entrega direta - quinta-feira", "Coleta na Amada Massa"],
     ["Coleta na Amada Massa - terça-feira", "Coleta na Amada Massa - quarta-feira", "Coleta na Amada Massa - quinta-feira", "Coleta no ponto Ritual Readshop (Av. do Forte, 532 - Cristo Redentor) - quinta-feira 10h às 19h"],
     ["Coleta na Amada Massa - terça-feira", "Coleta na Amada Massa - quarta-feira", "Coleta na Amada Massa - quinta-feira", "Coleta no ponto Gastronomia do Rock (Av Otto Niemeyer, 2500/124)- quinta-feira 8h às 19h"]
-  ];
+  ];*/
 
   // Validate fields before submission
   /*document.getElementById("formpedido").addEventListener("submit", function(e) { // TODO mudar
@@ -148,11 +148,11 @@ jQuery( document ).ready( function( $ ) {
           var opcoesEntrega = document.querySelector(".amada_massa_area-wrap select");
           var options_str = "";
           if (address_in_area){
-            opcoesSelect[coleta_area].forEach( function(car) {
+            AmadaMassaMapa.OPCOES[coleta_area].forEach( function(car) {
               options_str += '<option value="' + car + '">' + car + '</option>';
             });
           } else {
-            alert("Endereço fora da área. Entre em contato conosco.");
+            alert("Endereço não encontrado. Caso o problema persista, por favor entre em contato conosco.");
           }
 
           opcoesEntrega.innerHTML = options_str;
